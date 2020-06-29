@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>年货大街</title>       
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css?v=12">  
+    <script src="./lib/jquery-2.1.4.min.js"></script>  
+    <script src="./js/rem.js"></script>
+    <script src="./js/template-web.js"></script>  
+    <!-- <script src="https://www.foooooot.com/static/retail/js/vconsole.min.js"></script>
+	<script> 
+		var vConsole = new VConsole(); vConsole.setOption('maxLogNumber'); 
+	</script> -->
+</head>
+<body>       
+    <img src="./img/1.jpg" alt="" class="bg_img">
+    <img src="./img/2.jpg" alt="" class="bg_img">
+    <img src="./img/3.jpg" alt="" class="bg_img">
+    <div class="box">
+        <!-- 秒杀box -->
+        <div class="skill_box flex flex-direction-column">
+          
+        </div>
+
+        <!-- 规则 -->
+        <div class="rule_box">
+            <img src="./img/rule.png" alt="">
+            <div class="text">
+                <p>
+                    购物满1000元，送新年温情大礼包一份，包含 （手套+袜子）                                   
+                </p>
+                <p>
+                    购物满2000元，送新年温暖大礼包一份，包含（帽子+袜子）                                    
+                </p>
+                <p>
+                    购物满3000元，送新年超级大礼包一份，包含（背包+水杯）                                    
+                </p>
+                <p class="blod">添加福利君微信T190930，凭订单截图领取礼包</p>             
+            </div>
+        </div>
+        <!-- 父母 -->
+        <img src="./img/title1.png?v=1" alt="" class="title_box">
+        <!-- 普通box -->
+        <div class="plain_box1 plain_box flex flex-wrap flex-pack-justifyB"></div> 
+      
+        <!-- 爱人 -->
+        <img src="./img/title2.png?v=1" alt="" class="title_box">
+        <div class="plain_box2 plain_box flex flex-wrap flex-pack-justifyB"></div>
+
+        <!-- 孩子 -->
+        <img src="./img/title3.png?v=1" alt="" class="title_box">
+        <div class="plain_box3 plain_box flex flex-wrap flex-pack-justifyB"></div>
+
+
+        <div class="bottom_box">
+            <img src="./img/bottom.png" alt="">
+            <div class="text">
+                领奖找福利君！</br>
+                更多福利还找福利君！</br>
+                微信号：T190930</br>
+                想找福利，加TA，就加TA！
+            </div>
+        </div>
+        <button class="more_shop">更多商品</button>
+    </div>
+  
+</body>   
+<!-- 普通 -->
+<script type="text/html" id="plain_dom">
+    {{each data val key}}
+    <div class="bg_box flex flex-align-center flex-pack-center">
+        <div class="shop_box flex flex-direction-column" data-url='{{val.gooddetailurl}}' data-prodid="{{val.product_id}}">
+            <div class="left_box">
+                <img src="{{val.main_image}}" class="left">
+                {{if val.product_id !== '2213'}}
+                <img src="./img/logo.png" alt="" class="logo">
+                {{/if}}
+            </div>            
+            <p class="title">{{val.product_name}}</p>  
+            <div class="flex flex-align-center flex-pack-justifyB price_box">
+                <div class="flex flex-align-center">
+                    <div>
+                        <p class="max_price">吊牌价：{{val.market_price | initPrice}}</p>
+                        <p class="min_price">促销价：</p>
+                    </div>
+                    <div class="price">{{val.price | initPrice}}</div>
+                </div>
+                <button>立即抢购</button>
+            </div> 
+        </div>                
+    </div> 
+    {{/each}} 
+</script>  
+<!-- 秒杀 -->
+<script type="text/html" id="skill_dom">
+    {{each data val key}}
+    {{if key%2 !== 1}}
+    <div class="bg_box flex flex-align-center flex-pack-center">
+        <div class="shop_box flex flex-align-center flex-pack-justifyB" data-url='{{val.gooddetailurl}}' id="shop_{{key}}" data-prodid="{{val.product_id}}">
+            <img src="{{val.main_image}}" class="left">
+            <div class="right right1 flex flex-pack-center flex-direction-column">
+                <p class="title">{{val.product_name}}</p>
+                <div class="line"></div>
+                <div class="flex flex-align-center">
+                    <div>
+                        <p class="max_price">吊牌价：{{val.market_price | initPrice}}</p>
+                        <p class="min_price">促销价：</p>
+                    </div>                   
+                    {{if mkill_online_status === '1'}}
+                    <div class="price">{{val.mkill_price | initPrice}}</div>
+                    {{/if}}
+                    {{if mkill_online_status === '2'}}
+                    <div class="price">{{val.price | initPrice}}</div>
+                    {{/if}}
+                </div>
+                <button>立即抢购</button>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <div class="bg_box flex flex-align-center flex-pack-center">
+        <div class="shop_box flex flex-align-center flex-pack-justifyB" data-url='{{val.gooddetailurl}}' id="shop_{{key}}" data-prodid="{{val.product_id}}">           
+            <div class="right right2 flex flex-pack-center flex-direction-column">
+                <p class="title">{{val.product_name}}</p>
+                <div class="line"></div>
+                <div class="flex flex-align-center">
+                    <div>
+                        <p class="max_price">吊牌价：{{val.market_price | initPrice}}</p>
+                        <p class="min_price">促销价：</p>
+                    </div>
+                    {{if mkill_online_status === '1'}}
+                    <div class="price">{{val.mkill_price | initPrice}}</div>
+                    {{/if}}
+                    {{if mkill_online_status === '2'}}
+                    <div class="price">{{val.price | initPrice}}</div>
+                    {{/if}}
+                </div>
+                <button>立即抢购</button>
+            </div>
+            <img src="{{val.main_image}}" class="left">
+        </div>
+    </div>
+    {{/if}}
+    
+    {{/each}} 
+</script>   
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3135668c18272140721ac41b4cc30a71";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>    
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>     
+<script>
+template.defaults.imports.initPrice = function(val){
+    var str = parseInt(val)    
+    return  str
+};
+//获取url参数
+function getQueryString(e) {
+    var vars = {};
+    window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,      
+        function (m, key, value) {            
+            vars[key] = value;
+        }
+    );       
+    if(vars[e] === undefined) return ''
+    return vars[e];
+}
+
+
+var oid = getCookie('oid')
+var h5activityid = 4
+function getCookie(name){
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    if(arr=document.cookie.match(reg))
+    return unescape(arr[2]);
+    else
+    return null;
+}
+
+// 判断是否登录
+isLogin()
+function isLogin(){  
+    if(oid === 'null' || oid === null || oid === ''){       
+        window.location.href = '/index.php/sg/H5activity/wx_login?aid='+h5activityid
+    }
+}
+$(function(){
+    getData()
+    function getData(){
+        var obj = {
+            "id":h5activityid
+        }
+        $.post('https://www.toread.com.cn/index.php/sg/H5activity/geth5activityproducts',JSON.stringify(obj),function(res){
+            console.log(JSON.parse(res))
+            var res = JSON.parse(res)
+            if(res.code){
+                var productinfo = res.data.productinfo    
+                var mkill = res.data.mkill    
+                for(var i=0;i<mkill.length;i++){
+                    if(mkill[i].mkill_status === 2){
+                        var mkillObj = {data:mkill[i].product_info,mkill_online_status:mkill[i].mkill_online_status}
+                    }
+                }                
+                var obj1 = {data:productinfo[0]}          
+                var obj2 = {data:productinfo[1]}          
+                var obj3 = {data:productinfo[2]}          
+                var data1 = template("skill_dom",mkillObj);  
+                var data2 = template("plain_dom",obj1);  
+                var data3 = template("plain_dom",obj2);  
+                var data4 = template("plain_dom",obj3);  
+                $('.skill_box').append(data1) 
+                $('.plain_box1').append(data2) 
+                $('.plain_box2').append(data3) 
+                $('.plain_box3').append(data4) 
+            }else{
+                alert('该活动已结束')
+            }
+        })
+    }
+    $('.more_shop').click(function(){
+        wx.miniProgram.switchTab({ url: '/pages/index/index'})   
+    })
+    $('body').on("click",'.shop_box',function(){
+        var url = $(this).data('url')
+        var prodid = $(this).data('prodid')
+        sendGoodsevent(prodid)
+        _hmt.push(['_trackEvent', 'hot_shop', 'click', url]);
+        wx.miniProgram.navigateTo({ url: url+'&origin=h5'})
+    })
+   
+    function sendGoodsevent(id){
+        var obj = {
+            eventtype:'1',
+            product_id:id,
+            openid:oid,
+            h5activityid:h5activityid
+        }
+        $.post('/index.php/sg/H5activity/goodsevent',JSON.stringify(obj),function(res){
+            console.log(res)
+        })
+    }
+})
+</script>
+</html>

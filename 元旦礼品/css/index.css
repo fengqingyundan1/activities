@@ -1,0 +1,49 @@
+video {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-box {
+  width: 100%;
+  position: relative;
+}
+
+.img-box img {
+  display: block;
+  width: 100%;
+}
+
+.img-box .text-box {
+  position: absolute;
+  bottom: 1.72rem;
+  left: 0.25rem;
+  color: #ffffff;
+  font-size: 0.12rem;
+  line-height: 0.2rem;
+}
+
+.img-box .text-box .under {
+  width: 0.9rem;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.04rem;
+  margin-bottom: 0.1rem;
+}
+
+.img-box .text-box .blod {
+  font-weight: 600;
+  font-size: 0.18rem;
+  margin-bottom: 0.3rem;
+  text-decoration: underline;
+}
+
+.img-box .text-box .gopage {
+  width: 2rem;
+  margin: 0.3rem auto 0 auto;
+}
+
+.img-box .text-box .gopage img {
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */

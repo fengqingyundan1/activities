@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>非常难受</title>   
+    <link rel="stylesheet" href="./lib/weui/css/weui.css">
+    <link rel="stylesheet" href="./lib/weui/css/jquery-weui.css">
+    <link rel="stylesheet" href="https://www.foooooot.com/static/ya/css/fullpage.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css?v=117">    
+    <script src="./lib/jquery-2.1.4.min.js"></script>
+    <script src="./lib/weui/js/jquery-weui.min.js"></script>      
+    <script src="./js/rem.js"></script> 
+    <script src="./js/home.js?v=112"></script> 
+    <script src="https://www.foooooot.com/static/ya/js/fullpage.min.js"></script> 
+</head>
+<body>    
+   <div id="fullpage">      
+        <div class="section" id="sectio5">
+            <img src="./img/selection2.jpg" alt="" class="img">            
+            <img src="" alt="" class="downimg">
+            <div class="button-box" style="width: 80.135%">
+                <button class="black up-btn go">去加购吧</button>  
+                <p style="text-align: center;font-size: 0.12rem;margin-top: 2%;">长按保存图片并分享，让更多好友享受首发优惠</p>              
+            </div>            
+        </div>
+   </div>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+   
+    $(function(){
+        shareWxMenu('欢迎进入当代青年情绪研究所','发表情绪宣言，领取神秘特权','https://www.toread.com.cn/Public/fcns/index.html','https://www.toread.com.cn/Public/fcns/img/share.jpg')
+        var h1 = window.innerHeight;
+        var url = sessionStorage.getItem('img')
+        $('.downimg').attr('src',url)
+		$('.section').height(h1+'px');
+     
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            css3:true,
+            afterRender:function(index,nextIndex,direction){
+              
+            },
+            onLeave:function(index,nextIndex,direction){
+                
+            },
+            afterLoad:function(text,index){							
+                                
+            },
+        })   
+        $('.go').click(function(){
+            // wx.miniProgram.getEnv(function(res) {
+            //     if(res.miniprogram){
+            //         wx.miniProgram.navigateTo({url:'/pages/goodsDetail/goodsDetail?id=2106&type=2'})
+            //     }
+            // })
+            wx.miniProgram.navigateTo({url:'/pages/goodsDetail/goodsDetail?id=2106&type=2'})
+        })
+    
+   
+
+
+})
+    
+</script>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>硬货抽奖</title> 
+    <link rel="stylesheet" href="https://www.toread.com.cn/Public/activities/lottery_2/css/reset.css">
+    <link rel="stylesheet" href="https://www.toread.com.cn/Public/activities/lottery_2/css/index.css?v=9">  
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/lib/jquery-2.1.4.min.js"></script>
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/js/jQueryRotate.2.2.js"></script>
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/js/jquery.easing.min.js"></script>
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/js/rem.js"></script>     
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/js/home.js?v=1"></script>     
+</head>
+<body>
+    <div class="box">
+        <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/toread.png" alt="" class="logo">
+        <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/sologn.png" alt="" class="sologn">
+        <div class="lottery-box">
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/lottery.png?v=1" alt="" class="lottery">
+            <div class="btn">
+                <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/begin.png" alt="" class="begin">
+                <div class="residue">
+                    剩余0次
+                </div>
+            </div>
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/shoes.png" alt="" class="shoes">
+        </div>
+        <div>
+            <p class="myaward">我的奖品&gt;</p>
+            <div class="button-box flex flex-pack-justifyB">
+                <button class="share">分享好友</button>
+                <button class="toread">探路者硬货</button>
+            </div>           
+        </div>
+        <div class="rule-box">
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/rules.png" alt="">
+            <div class="text-box">
+                <p>1、每个用户ID每天拥有1次抽奖机会；</p>
+                <p>2、大转盘中所有奖项，除男式单向导湿长袖T恤（TAJH91931）、女式单向导湿长袖T恤（TAJH92932）、320mL暖手随行摇摇杯（TEGH90392）、暖手随行杯礼盒（TEGH90394）外，均可使用；</p>                    
+                <p>3、中奖的朋友请联系<span style="color: red;font-weight: 700;">福利君（微信号：T190930）</span>兑换奖品，实物奖品将在7个工作日内发出。</p>
+            </div>
+        </div>        
+    </div>
+    <!-- 探路者硬货 -->
+    <div class="alert1 alert">
+        <div>
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/close-white.png" alt="" class="close">
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/alert1.png?v=1" alt="" class="bg">
+        </div>
+    </div>
+    <!-- 失败 -->
+    <div class="alert2 alert">
+        <div>
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/close.png" alt="" class="close">
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/false.png" alt="" class="false">
+            <p class="award-des"></p>
+            <div class="award-img">
+                <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/award_false.png"  >  
+                <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/code.png"  class="code">              
+            </div>
+            <p class="des">长按二维码，添加福利君求安慰</p>
+        </div>
+    </div>
+    <!-- 成功 -->
+    <div class="alert3 alert">
+        <div>
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/close.png" alt="" class="close">
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/true.png" alt="" class="true">
+            <p class="award-des"></p>
+            <div class="award-img">
+                <img src="" alt="" class="shop" >
+                <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/code.png" alt="" class="code">
+            </div>
+            <p class="des">长按二维码，添加福利君领奖了</p>
+        </div>
+    </div>
+    <!-- 分享 -->
+    <div class="share-box">
+        <div class="right">
+            <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/line.png" alt="" class="line">
+            <div>1.好活动，一定要分享呦！</div>
+            <div>2.点击 <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/weixin.png" alt="" class="weixin">或 <img src="https://www.toread.com.cn/Public/activities/lottery_2/img/share.png" alt="" class="weixin">按钮</div>
+            <div>分享给更多好友获取福利</div>
+            <button>知道了</button>
+        </div>        
+    </div>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3135668c18272140721ac41b4cc30a71";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>    
+<script>
+$(function(){   
+    shareWxMenu('购硬货，幸运转盘赢好礼！','全场5折特权码，等你来抢！','https://www.toread.com.cn/index.php/m/index/lottery/index.html','https://www.toread.com.cn/Public/activities/lottery_2/img/weixin_share.png')
+    var userid = $("input[name='id']").val()
+    var $btn = $('.lottery');
+    var isture = true;       
+        $(".btn").click(function() { 
+            if(!isture) return false    
+            var num = $('.residue').attr('num') 
+            if(num<=0) return      
+            num--
+            $('.residue').html('剩余'+num+'次').attr('num',num)      
+            getAwardcode()  
+
+        });
+        var interval;
+        function getAwardcode(obj){ 
+            getAwardAjax()
+        }
+        residue() //获取剩余次数
+        function residue(){
+            $.post('https://www.toread.com.cn/index.php/api/webapi/getRemainTimes',{'id':userid},function(res){
+                var res = JSON.parse(res)              
+                $('.residue').html('剩余'+res.data.msg+'次').attr('num',res.data.msg)              
+            })
+        }
+        function getAwardAjax(){            
+            $.post('https://www.toread.com.cn/index.php/api/webapi/opStart',{'id':userid},function(res){
+                var res = JSON.parse(res)              
+                if(res.code === 1){
+                    cirleImg(res.data)
+                }else{
+                    alert(res.data.msg)
+                }
+                
+            })
+            // cirleImg({
+            //     id:49,
+            //     price_name:'20升超轻背包'
+            // })
+        }
+        function goMinIndex(){
+            wx.miniProgram.getEnv(function(res) {
+                wx.miniProgram.switchTab({url:'/pages/index/index'})
+            })
+        }
+        function cirleImg(data) {  
+            console.log(data)
+            switch(data.id) {
+                case 43:
+                    rotateFunc(data, 5, '满500减200');
+                    break;
+                case 44:
+                    rotateFunc(data, -40, '全场5.5折');
+                    break;
+                case 45:                   
+                    rotateFunc(data, -85, '满1000减500');
+                    break;
+                case 46:
+                    rotateFunc(data, -125, '谢谢参与'); 
+                    break;
+                case 47:                   
+                    rotateFunc(data, -170, '满800减350');                  
+                    break;              
+                case 48:
+                    rotateFunc(data, -215, '全场6折');
+                    break;
+                case 49:
+                    rotateFunc(data, -260, '20升超轻背包');
+                    break;
+                case 50:
+                    rotateFunc(data, -305, '全场5折');
+                    break;
+                
+            }
+        }
+
+        function rotateFunc(awards, angle) {           
+            isture = false;
+            clearInterval(interval);
+            $btn.stopRotate();
+            $btn.rotate({
+                angle: 0,//旋转的角度数
+                duration: 10000, //旋转时间
+                animateTo: angle + 2440, //给定的角度,让它根据得出来的结果加上1440度旋转
+                easing: $.easing.easeOutExpo,
+                callback: function() {
+                    isture = true;
+                    toastAlert(awards)
+                }
+            });
+        }
+
+        function toastAlert(data){
+         
+            if(data.id === 44 || data.id === 48 || data.id === 50){ // 折扣券
+                $('.alert3').show()
+                $('.award-des').html('获得'+data.price_name+'特权码<br/>');                          
+                $('.alert3 .shop').attr('src','https://www.toread.com.cn/Public/activities/lottery_2/img/'+data.id+'.png')
+            }
+            if(data.id === 43 || data.id === 45 || data.id === 47){ // 满减券
+                $('.alert3').show()
+                $('.award-des').html('获得'+data.price_name+'特权码');                          
+                $('.alert3 .shop').attr('src','https://www.toread.com.cn/Public/activities/lottery_2/img/'+data.id+'.png')
+            }
+            if(data.id === 49){ // 实物奖品
+                $('.alert3').show()
+                $('.award-des').html('获得'+data.price_name+'1个');                          
+                $('.alert3 .shop').attr('src','https://www.toread.com.cn/Public/activities/lottery_2/img/'+data.id+'.png')
+            }
+            if(data.id === 46){ // 谢谢参与
+                $('.alert2').show()
+            }          
+        }
+
+        $('.myaward').click(function(){
+            sessionStorage.setItem('id',userid)
+            window.location.href = 'https://www.toread.com.cn/Public/activities/lottery_2/myaward.html'
+        })
+
+        $('.close').click(function(){
+            $('.alert').hide()
+        })
+        $('.share-box').click(function(){
+            $(this).hide()
+        })
+        $('.share').click(function(){
+            $('.share-box').show()
+        })
+        $('.toread').click(function(){
+            $('.alert1').show()
+            // goMinIndex()
+        })
+})
+</script>
+</html>

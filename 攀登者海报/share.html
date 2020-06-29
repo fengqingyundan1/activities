@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>领取公益证书</title> 
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">    
+    <style>
+        #box{
+            width: 3.35rem;
+            margin: 0.1rem auto;
+        }
+        #box img{
+            width: 100%;
+            font-size: 0;
+        }
+        p{
+            /* width: 3.35rem; */
+            font-size:0.1rem;
+            font-family:PingFangSC-Light,PingFangSC;
+            font-weight:300;
+            color:rgba(35,24,21,1);           
+            letter-spacing:0.09rem;
+            text-align: center;
+            /* margin: auto; */
+            margin-left: 7px;
+        }
+    </style>
+    <script src="./lib/jquery-2.1.4.min.js"></script>
+    <script src="./js/rem.js"></script> 
+    <script src="./js/home.js"></script>    
+</head>
+<body>    
+    <div id="box">
+        <img src="" alt="" class="downimg" style="width: 100%">
+    </div>
+    <p>生成证书后，长按图片即可保存您的海报</p>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?1ce9e0ab3f050e186cd491508213942f";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+        
+<script>
+   
+$(function(){
+      
+    var url = sessionStorage.getItem('img')
+    $('.downimg').attr('src',url)
+
+})
+    
+</script>
+</html>

@@ -1,0 +1,22 @@
+{
+    "liveServer.settings.port": 6061,  
+    "liveServer.settings.proxy": {
+        "enable": true,
+        "baseUri": "/maqing",
+        "proxyUri": "http://123.57.157.77/tourios/ti/"
+    },
+    "liveSassCompile.settings.formats":[
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath":"/css" 
+        }       
+    ],
+    "liveSassCompile.settings.excludeList": [ 
+        "**/node_modules/**",
+        ".vscode/**" 
+    ],
+    "liveSassCompile.settings.showOutputWindow":false,
+    "liveSassCompile.settings.generateMap":true
+}

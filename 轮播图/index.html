@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>        
+        img{
+           width: 100%;
+        }
+    </style>
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+</head>
+<body>
+        <div class="swiper-container swiper-container1">
+                <div class="swiper-wrapper "> 
+                        <div class="swiper-slide">
+                            <img src="./img/1.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/2.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/3.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/4.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/5.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/6.jpg?v=1" alt="">
+                        </div> 
+                        <div class="swiper-slide">
+                            <img src="./img/7.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/8.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/9.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/10.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/11.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/12.jpg?v=1" alt="">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./img/13.jpg?v=1" alt="">
+                        </div>  
+                        <div class="swiper-slide">
+                            <img src="./img/14.jpg?v=1" alt="">
+                        </div>               
+                </div>       
+                <div class="swiper-pagination"></div>
+           </div>
+</body>
+<script>
+    $(function(){
+        new Swiper('.swiper-container', {         
+            centeredSlides: true,
+            autoplay:true,
+            loop:'true',      
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        })
+        
+        if(document.documentElement.RequestFullScreen){           
+            document.documentElement.RequestFullScreen();
+          }
+          //兼容火狐         
+          if(document.documentElement.mozRequestFullScreen){
+            document.documentElement.mozRequestFullScreen();
+          }
+          //兼容谷歌等可以webkitRequestFullScreen也可以webkitRequestFullscreen
+          if(document.documentElement.webkitRequestFullScreen){
+            console.log('111')
+            document.documentElement.webkitRequestFullScreen();
+          }
+          //兼容IE,只能写msRequestFullscreen
+          if(document.documentElement.msRequestFullscreen){
+            document.documentElement.msRequestFullscreen();
+          }
+    })
+     
+</script>
+</html>

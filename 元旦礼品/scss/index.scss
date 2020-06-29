@@ -1,0 +1,40 @@
+video{
+    width: 100%;
+    display: block;
+    object-fit:cover
+}
+.img-box{
+    width: 100%;
+    position: relative;
+    img{
+        display: block;
+        width: 100%;
+    }
+    .text-box{
+        position: absolute;
+        bottom: 1.72rem;
+        left: 0.25rem;
+        color: #ffffff;
+        font-size: 0.12rem;
+        line-height: 0.2rem;
+        .under{
+            width: 0.9rem;
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 0.04rem;
+            margin-bottom: 0.1rem;
+        }
+        .blod{
+            font-weight: 600;
+            font-size: 0.18rem;
+            margin-bottom: 0.3rem;
+            text-decoration: underline;
+        }
+        .gopage{
+            width: 2rem;
+            margin: 0.3rem auto 0 auto;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

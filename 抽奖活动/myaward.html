@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>硬货抽奖</title> 
+    <link rel="stylesheet" href="https://www.toread.com.cn/Public/activities/lottery_2/css/reset.css">
+    <link rel="stylesheet" href="./css/myaward.css">  
+    <link rel="stylesheet" href="./lib/weui/css/weui.css">  
+    <link rel="stylesheet" href="./lib/weui/css/jquery-weui.css">  
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/lib/jquery-2.1.4.min.js"></script> 
+    <script src="./lib/weui/js/jquery-weui.min.js"></script>   
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/js/rem.js"></script>    
+    <script src="https://www.toread.com.cn/Public/activities/lottery_2/js/home.js?v=1"></script> 
+    <!-- <script src="https://www.foooooot.com/static/retail/js/vconsole.min.js"></script>
+    <script> 
+		var vConsole = new VConsole(); vConsole.setOption('maxLogNumber'); 
+	</script> -->
+</head>
+<body>
+    <div class="box">       
+    </div>
+</body>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3135668c18272140721ac41b4cc30a71";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>    
+<script>
+$(function(){
+    shareWxMenu('购硬货，幸运转盘赢好礼！','全场5折特权码，等你来抢！','https://www.toread.com.cn/index.php/m/index/lottery/index.html','https://www.toread.com.cn/Public/activities/lottery_2/img/weixin_share.png')
+    var userid = sessionStorage.getItem('id')
+    getMyAward()
+    function getMyAward(){
+        $.showLoading('正在加载中...')
+        $.post('https://www.toread.com.cn/index.php/api/webapi/winlist',{'id':userid},function(res){
+            var res = JSON.parse(res)
+            console.log(res)
+            $.hideLoading()
+            if(res.data!== '暂无数据'){
+                for(var i = 0; i< res.data.length;i++){                    
+                    awardDom(res.data[i])
+                }
+            }else{
+                $.toast('您还没有获得奖品哦','text')
+            }
+            
+        })
+    }
+
+    function awardDom(data){      
+        var str = $(' <div><p class="title">'+data.price_name+'</p><p class="time">'+timestampToTime(data.addtime)+'</p></div>')
+        $('.box').append(str)
+    }
+
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp * 1000);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+        var D = (date.getDate() < 10 ? '0'+date.getDate() : date.getDate()) + ' ';
+        var h = (date.getHours() < 10 ? '0'+date.getHours() : date.getHours()) + ':';
+        var m = (date.getMinutes() < 10 ? '0'+date.getMinutes() : date.getMinutes()) + ':';
+        var s = (date.getSeconds() < 10 ? '0'+date.getSeconds() : date.getSeconds());
+        return Y+M+D+h+m+s;
+    }
+})
+</script>
+</html>

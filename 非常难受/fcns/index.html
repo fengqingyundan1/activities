@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>非常难受</title>   
+    <link rel="stylesheet" href="./lib/weui/css/weui.css">
+    <link rel="stylesheet" href="./lib/weui/css/jquery-weui.css">
+    <link rel="stylesheet" href="https://www.foooooot.com/static/ya/css/fullpage.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css?v=117">    
+    <link rel="stylesheet" href="https://unpkg.com/animate.css@3.5.2/animate.min.css"> 
+    <script src="./lib/jquery-2.1.4.min.js"></script>
+    <script src="./lib/weui/js/jquery-weui.min.js"></script>      
+    <script src="./js/rem.js"></script> 
+    <script src="./js/home.js?v=112"></script> 
+    <script src="https://www.foooooot.com/static/ya/js/fullpage.min.js"></script> 
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="https://www.foooooot.com/static/tybj/js/exif.js"></script>
+    <!-- <script src="https://www.foooooot.com/static/retail/js/vconsole.min.js"></script>
+	<script> 
+		var vConsole = new VConsole(); vConsole.setOption('maxLogNumber'); 
+	</script> -->
+</head>
+<body>    
+   <div id="fullpage">
+        <div class="section" id="section0">
+            <img src="./img/selection0.jpg" alt="" class="img">
+            <div class="down_box animated swing">
+                <img src="https://www.foooooot.com/static/ya/img/down.png" alt="">
+            </div>
+        </div>
+        <div class="section" id="section1">
+            <img src="./img/selection1.jpg?v=2" alt="" class="img">
+            <div class="down_box animated swing">
+                <img src="https://www.foooooot.com/static/ya/img/down.png" alt="">
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <img src="./img/selection2.jpg" alt="" class="img">
+            <div class="poster-box flex flex-align-center flex-pack-center">
+                <div class="img-box">
+                    <img src="./img/poster.png?v=1" alt="" class="poster-imgs">
+                    <img src="./img/text_white5.png" alt="" class="poster-right">
+                    <img src="./img/text_blak5.png" alt="" class="poster-left"> 
+                </div>
+            </div>
+            <div class="button-box">
+                <button class="black up-btn">上传照片</button>
+                <input id="upfile" type="file" accept="image/*" name="upfile" style="display: none" >
+                <button class="white roule-btn">活动规则</button>
+            </div>
+            <div class="roule-box">
+                <img src="./img/rule_alert.png?v=2" alt="" class="alert">
+                <img src="./img/rule_close.png" alt="" class="close">
+            </div>
+        </div>
+        <div class="section" id="sectio3">
+            <img src="./img/selection2.jpg" alt="" class="img">
+            <div class="poster-box flex flex-align-center flex-pack-center poster-height">
+                <div class="img-box">
+                    <img src="" alt="" class="poster-img poster-user">
+                    <img src="./img/text_white1.png" alt="" class="poster-right">
+                    <img src="./img/text_blak1.png" alt="" class="poster-left"> 
+                </div>                
+            </div>
+            <div class="button-box">
+                <button class="black go-last">生成我的情绪宣言</button>
+                <div class="flex flex-pack-justifyB">
+                    <button class="black up-btn" style="background: #484848">重新上传照片</button>
+                    <button class="black choose-btn" style="background: #484848">选择文案</button>
+                </div>
+            </div>
+            <div class="roule-box">
+                <img src="./img/rule_alert.png" alt="" class="alert">
+                <img src="./img/rule_close.png" alt="" class="close">
+            </div>
+        </div>
+        <div class="section" id="sectio4">
+            <img src="./img/selection3.jpg" alt="" class="img">
+            <div class="center-box flex flex-align-center flex-pack-center flex-direction-column">
+                <ul class="choose-box">
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check active"></i>
+                        <div>
+                            <p class="one">离家远行，非常难受</p>
+                            <p class="two">愿我出走半生，归来仍是少年</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">方案被毙，非常难受</p>
+                            <p class="two">既然改稿逃不掉，不如烧烤配烧脑</p>
+                        </div>
+                    </li>  
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">减肥管不住嘴，非常难受</p>
+                            <p class="two">减肥这句话说出来就已经吓唬住肥肉了</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">被逼婚，非常难受</p>
+                            <p class="two">结婚可是大事，需要慎重考虑一辈子</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">又又加班，非常难受</p>
+                            <p class="two">生活不止眼前的加班，还有明天和后天的加班</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">考试失败，非常难受</p>
+                            <p class="two">失落但不堕落，不服输就能逆转未来</p>
+                        </div>
+                    </li>  
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">喝酒应酬，非常难受</p>
+                            <p class="two">威士忌里泡枸杞养生要的是个态度</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">失恋，非常难受</p>
+                            <p class="two">相信爱情，幸福随时可能降临</p>
+                        </div>
+                    </li>                
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>
+                            <p class="one">刷爆卡，非常难受</p>
+                            <p class="two">花今天的钱，圆明天的梦</p>
+                        </div>
+                    </li>
+                    <li class="flex flex-align-center choose-li">
+                        <i class="choose-check"></i>
+                        <div>                        
+                            <p class="two">我太难了</p>
+                        </div>
+                    </li> 
+                
+                </ul>
+                <div class="button-box">
+                    <div class="flex flex-pack-justifyB">
+                        <button class="red1 choose-text" data-type='1'>使用白色文字</button>
+                        <button class="red2 choose-text" data-type='2'>使用黑色文字</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="sectio5">
+            <img src="./img/selection2.jpg" alt="" class="img">
+            <div class="poster-box  poster-box1" id="shareimg">
+                <div class=" flex flex-align-center flex-pack-center flex-direction-column">
+                    <div class="img-box img-box-con">
+                        <img src="" alt="" class="poster-img poster-user">  
+                        <img src="./img/text_white1.png" alt="" class="poster-right">
+                        <img src="./img/text_blak1.png" alt="" class="poster-left">                 
+                    </div>      
+                     <div class="user-box flex">
+                        <div class="code-box"><img src="./img/code.jpg" alt="" class="code"></div>
+                        <div class="two">
+                            <div class="flex flex-align-center">
+                                <img src="./img/hot.png" alt="" class="hot">
+                                <p style="font-weight: 600">@<span class="username">探路者硬货</span></p>
+                            </div>  
+                            <p>扫码进入“非常难受联名款”商品页</p>                          
+                            <p>下单时优惠码栏输入：<span style="font-weight:600;color:#c20100">非常难受</span> </p>  
+                            <p>享受专享折扣</p>
+                            <p style="color: rgb(144,144,144)">同时，生成专属海报，发表自己的情绪宣言</p>
+                        </div>
+                    </div>                           
+                </div>
+            </div>
+            <img src="" alt="" class="downimg">            
+            
+        </div>
+   </div>
+</body>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?6e2be85c9781a8d77052806c2064ed03";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>        
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+   shareWxMenu('欢迎进入当代青年情绪研究所','发表情绪宣言，领取神秘特权','https://www.toread.com.cn/Public/fcns/index.html','https://www.toread.com.cn/Public/fcns/img/share.jpg')
+    $(function(){
+        var h1 = window.innerHeight;
+        var isto3 = false
+		$('.section').height(h1+'px');
+     
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            css3:true,
+            afterRender:function(index,nextIndex,direction){
+              
+            },
+            onLeave:function(index,nextIndex,direction){
+                // console.log(index)
+                // console.log(nextIndex)
+                // console.log(direction)
+                if(index.index === 2 && nextIndex.index === 3){                   
+                    return isto3
+                }
+                if(index.index === 4 && nextIndex.index === 5){                   
+                   return false
+               }
+            },
+            afterLoad:function(text,index){							
+                                
+            },
+        })
+        getUserInfo()
+        $.fn.fullpage.silentMoveTo(1)
+        $('.roule-btn').click(function(){
+            $('.roule-box').show()
+        })
+        $('.close').click(function(){
+            $('.roule-box').hide()
+        })
+        $('.up-btn').click(function(){
+            $("#upfile").trigger("click");
+        })
+
+        // img上传change事件
+        $("#upfile").change(function(){       
+            file = this.files[0];    
+            console.log(file)    
+            if(file){ 
+                var reader = new FileReader(); //本地预览
+                reader.readAsDataURL(file); //Base64
+                reader.onload = function(e){
+                    EXIF.getData(file,function(){
+                                
+                        roted = file.exifdata.Orientation;              
+                        var  reader = new FileReader();        
+                        reader.readAsDataURL(file);
+                        reader.onload = function(e){ 
+                            $('.clipbox').show();
+                            $('.attendbox').hide();               
+                            getImgData(this.result,roted,function(data){
+                                var img = new Image();
+                                img.src = data
+                                img.onload = function(){
+                                    var width  = this.width
+                                    var height = this.height
+                                    console.log(width,height)                                   
+                                    var initWidth = $('.img-box-con').width()
+                                    var initHeight = $('.img-box-con').height()
+                                    console.log(initWidth,initHeight)
+                                    if(width - initWidth > height-initHeight){                                        
+                                        $('.poster-user').addClass('img-height')
+                                    }else if(height-initHeight > width - initWidth){
+                                        $('.poster-user').addClass('img-width')
+                                    }
+                                 
+                                }                              
+                             
+                                $('.poster-user').attr('src',data)                               
+                                isto3 = true
+                                $.fn.fullpage.silentMoveTo(4)
+                            })  
+                            
+                        }
+                    });
+                }
+            }
+    
+        });
+        // 单选
+        $('.choose-li').click(function(){
+            var isclick = $(this).find('.choose-check').hasClass('active')
+            $('.choose-check').removeClass('active')
+            if(!isclick) $(this).find('.choose-check').addClass('active')                
+            
+        })
+        $('.choose-btn').click(function(){
+            $.fn.fullpage.silentMoveTo(5)
+        })
+        // 选颜色
+        $('.choose-text').click(function(){
+            var type = $(this).data('type')
+            var order = $('.choose-box .active').parent('li').index() + 1            
+            if(type === 1){ //白色
+                $('.poster-right').attr('src','./img/text_white'+order+'.png')
+                $('.poster-left').attr('src','./img/text_blak'+order+'.png')
+            }else{
+                $('.poster-left').attr('src','./img/text_whites'+order+'.png')              
+                $('.poster-right').attr('src','./img/text_blaks'+order+'.png')
+            }           
+              
+                $.fn.fullpage.silentMoveTo(4)
+            
+        })
+       $('.go-last').click(function(){           
+            $.showLoading('正在生成图片')        
+            drawCanvas('shareimg').then(function(canvas){   
+                console.log('jieshu')                         
+                var url = canvas.toDataURL("image/png")                   
+                    sessionStorage.setItem('img',url)
+                    window.location.href = './share.html'
+                    $.hideLoading('正在生成图片')
+
+                    // $('#shareimg').hide()
+                    // $('.downimg').attr('src',url)
+                    // $.fn.fullpage.silentMoveTo(6)
+                })
+       })       
+    function DPR() {
+        if (window.devicePixelRatio && window.devicePixelRatio > 1) {
+            return window.devicePixelRatio;
+        }
+        return 1;
+    }
+    function parseValue(value) {
+        return parseInt(value, 10);
+    };
+    function drawCanvas(selector) {
+        // 获取想要转换的 DOM 节点
+        var dom = document.getElementById(selector);       
+        var box = window.getComputedStyle(dom);
+        // DOM 节点计算后宽高
+        var width = parseValue(box.width);
+        var height = parseValue(box.height) * 1.1;
+        console.log(height)
+        // 获取像素比
+        var scaleBy = DPR();
+        // 创建自定义 canvas 元素
+        var canvas = document.createElement('canvas');
+
+        // 设定 canvas 元素属性宽高为 DOM 节点宽高 * 像素比
+        canvas.width = width * scaleBy;
+        canvas.height = height * scaleBy;
+        // 设定 canvas css宽高为 DOM 节点宽高
+        canvas.style.width = width+'px';
+        canvas.style.height = height+'px';
+        // 获取画笔
+        var context = canvas.getContext('2d');
+
+        // 将所有绘制内容放大像素比倍
+        context.scale(scaleBy, scaleBy);
+        console.log('最后')
+        // 将自定义 canvas 作为配置项传入，开始绘制
+        return  html2canvas(dom, {canvas});
+    }
+    
+
+    function getImgData(img,dir,next){
+        var image=new Image();
+        image.onload=function(){
+        var degree=0,drawWidth,drawHeight,width,height;
+        drawWidth=this.naturalWidth;
+        drawHeight=this.naturalHeight;
+        //以下改变一下图片大小
+        var maxSide = Math.max(drawWidth, drawHeight);
+        if (maxSide > 1024) {
+        var minSide = Math.min(drawWidth, drawHeight);
+        minSide = minSide / maxSide * 1024;
+        maxSide = 1024;
+        if (drawWidth > drawHeight) {
+        drawWidth = maxSide;
+        drawHeight = minSide;
+        } else {
+        drawWidth = minSide;
+        drawHeight = maxSide;
+        }
+        }
+        var canvas=document.createElement('canvas');
+        canvas.width=width=drawWidth;
+        canvas.height=height=drawHeight;
+        var context=canvas.getContext('2d');
+        //判断图片方向，重置canvas大小，确定旋转角度，iphone默认的是home键在右方的横屏拍摄方式
+        switch(dir){
+        //iphone横屏拍摄，此时home键在左侧
+        case 3:
+        degree=180;
+        drawWidth=-width;
+        drawHeight=-height;
+        break;
+        //iphone竖屏拍摄，此时home键在下方(正常拿手机的方向)
+        case 6:
+        canvas.width=height;
+        canvas.height=width;
+        degree=90;
+        drawWidth=width;
+        drawHeight=-height;
+        break;
+        //iphone竖屏拍摄，此时home键在上方
+        case 8:
+        canvas.width=height;
+        canvas.height=width;
+        degree=270;
+        drawWidth=-width;
+        drawHeight=height;
+        break;
+        }
+        //使用canvas旋转校正
+        context.rotate(degree*Math.PI/180);
+        context.drawImage(this,0,0,drawWidth,drawHeight);
+        //返回校正图片
+        next(canvas.toDataURL("image/jpeg",.8));
+        }
+        image.src=img;
+    } 
+   
+
+
+})
+    
+</script>
+</html>

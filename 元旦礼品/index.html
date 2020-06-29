@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>来自行走在最高处的产品经理的礼物</title>       
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css?v=2">  
+    <!-- <link href="http://vjs.zencdn.net/7.3.0/video-js.min.css" rel="stylesheet">
+    <script src="http://vjs.zencdn.net/7.3.0/video.min.js"></script>     -->
+    <script src="./lib/jquery-2.1.4.min.js"></script>  
+    <script src="./js/rem.js"></script>    
+    <style>
+        .img-box{
+            width: 100%;
+            display: block;
+        }
+    </style>
+    <!-- <script src="https://www.foooooot.com/static/retail/js/vconsole.min.js"></script>
+	<script> 
+		var vConsole = new VConsole(); vConsole.setOption('maxLogNumber'); 
+	</script> -->
+</head>
+<body>    
+<img src="img/boss.png" alt="" class="img-box">
+<video src="https://video.toread.com.cn/xcx/20191205.mp4" controls="controls" webkit-playsinline poster="img/1.jpg"></video>
+<video src="https://video.toread.com.cn/wj/tlz-hor.mp4" controls="controls" webkit-playsinline  poster="img/2.png"></video>
+<div class="img-box">
+  
+    <img src="img/jing.jpg" alt="">
+    <div class="text-box">
+   
+
+
+        <!-- <p class="blod">特权码：飞雪静静</p> -->
+        <!-- <p class="under">特权码使用说明:</p>
+        <p>选购完商品，付款时，特权码处输入上方特权码名称，立享</p>
+        <p>粉丝特权价，一起来扫货吧！</p>         -->
+        <p>带上装备跟我一起出发吧</p>
+        <p>打开微信，搜索“探路者硬货”小程序</p>
+        <p>即刻解锁新装备</p>
+        <!-- <div class="gopage">
+            <img src="img/button.png" alt="">
+        </div> -->
+    </div>
+
+</div>
+</body>      
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3135668c18272140721ac41b4cc30a71";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>    
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>     
+<script>
+$(function(){
+    $('.gopage').click(function(){
+        wx.miniProgram.getEnv(function(res) {
+            wx.miniProgram.switchTab({url:'/pages/index/index'})
+        })
+    })
+})
+</script>
+</html>

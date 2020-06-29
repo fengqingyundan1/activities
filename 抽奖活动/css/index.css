@@ -1,0 +1,266 @@
+.box {
+  width: 100%;
+  background: rgba(184, 137, 105, 0.08) url("../img/bgimg.png") no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  padding-bottom: 0.35rem;
+}
+
+.box .logo {
+  display: block;
+  width: 0.99rem;
+  margin: 0.1rem 0 0 0.1rem;
+}
+
+.box .sologn {
+  display: block;
+  width: 3.17rem;
+  margin: 0.14rem auto 0 auto;
+}
+
+.lottery-box {
+  width: 3.48rem;
+  margin: auto;
+  position: relative;
+}
+
+.lottery-box img {
+  display: block;
+}
+
+.lottery-box .lottery {
+  width: 100%;
+}
+
+.lottery-box .btn {
+  width: 0.98rem;
+  height: 1.13rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.lottery-box .btn .residue {
+  position: absolute;
+  bottom: 0.24rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 0.1rem;
+  color: #493929;
+}
+
+.lottery-box .begin {
+  width: 100%;
+}
+
+.lottery-box .shoes {
+  width: 0.81rem;
+  position: absolute;
+  right: 0.17rem;
+  bottom: 0;
+}
+
+.myaward {
+  width: 100%;
+  text-align: center;
+  font-size: 0.16rem;
+  margin: 0.3rem auto 0.1rem auto;
+}
+
+.button-box {
+  width: 3.27rem;
+  margin: auto;
+}
+
+.button-box button {
+  width: 1.6rem;
+  height: 0.6rem;
+  font-family: PingFangSC-Medium;
+  font-size: 0.16rem;
+  color: #ffffff;
+  border-radius: 0.02rem;
+}
+
+.button-box .share {
+  background: #B2853F;
+}
+
+.button-box .toread {
+  background: #231815;
+}
+
+.rule-box {
+  width: 3.27rem;
+  background: #B2853F;
+  border: 4px solid #231815;
+  border-radius: 0.06rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0.6rem auto 0 auto;
+  padding-bottom: 0.2rem;
+}
+
+.rule-box img {
+  width: 1.83rem;
+  display: block;
+  margin: 0.08rem auto 0 auto;
+}
+
+.rule-box .text-box {
+  width: 2.79rem;
+  background: #FFFCF8;
+  border-radius: 0.08rem;
+  margin: 0.18rem auto 0 auto;
+  padding: 0.1rem 0;
+}
+
+.rule-box .text-box p {
+  font-family: PingFangSC-Regular;
+  font-size: 0.14rem;
+  color: #231815;
+  letter-spacing: 0;
+  line-height: 0.2rem;
+  width: 2.4rem;
+  margin: 0.06rem auto 0 auto;
+}
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 0.14rem;
+  color: #333333;
+  letter-spacing: 0;
+}
+
+.alert > div {
+  width: 3.15rem;
+  height: 4.19rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 0.06rem;
+}
+
+.alert .award-des {
+  width: 2.7rem;
+  margin: auto;
+}
+
+.alert .des {
+  font-family: PingFangSC-Medium;
+  font-size: 0.14rem;
+  margin-top: 0.08rem;
+  color: #333333;
+}
+
+.alert .award-img {
+  width: 1.83rem;
+  margin: 0.4rem auto 0 auto;
+  position: relative;
+}
+
+.alert .award-img img {
+  width: 100%;
+}
+
+.alert .award-img .code {
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 50px;
+}
+
+.alert .close {
+  width: 0.22rem;
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+}
+
+.alert1 > div .bg {
+  width: 100%;
+}
+
+.alert2 .false {
+  width: 1.95rem;
+  display: block;
+  margin: 0.4rem auto 0.12rem auto;
+}
+
+.alert2 .award-img {
+  width: 1.83rem;
+  margin: 0.4rem auto 0 auto;
+}
+
+.alert2 .award-img img {
+  width: 100%;
+}
+
+.alert3 .true {
+  width: 1.58rem;
+  display: block;
+  margin: 0.4rem auto 0.12rem auto;
+}
+
+.share-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  text-align: right;
+}
+
+.share-box .right {
+  position: absolute;
+  right: 0.2rem;
+}
+
+.share-box .line {
+  width: 0.48rem;
+  margin: 0.2rem;
+}
+
+.share-box div {
+  font-family: PingFangSC-Regular;
+  font-size: 0.16rem;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 0.16rem;
+  width: auto;
+  margin-top: 0.2rem;
+}
+
+.share-box button {
+  width: 1.2rem;
+  height: 0.4rem;
+  border: 1px solid #FFFFFF;
+  border-radius: 0.04rem;
+  font-family: PingFangSC-Regular;
+  font-size: 0.16rem;
+  color: #FFFFFF;
+  margin-right: 0.4rem;
+  margin-top: 0.26rem;
+}
+
+.share-box .weixin {
+  width: 0.36rem;
+  margin: 0 0.12rem;
+}
+/*# sourceMappingURL=index.css.map */

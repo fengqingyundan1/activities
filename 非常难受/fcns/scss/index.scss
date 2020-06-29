@@ -1,0 +1,226 @@
+.section{
+    overflow: hidden;
+}
+#sectio5{
+    // display: none;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    font-size: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.poster-height{
+    height: 74.515%;
+}
+.img-height{
+    height:100%;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%)
+}
+.img-width{
+    width:100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%)
+}
+.poster-box{
+    width: 90.135%;   
+    background: #b41c27;
+    border: 0.03rem solid #161717;
+    box-sizing: border-box;
+    position: relative;
+    margin: 2% auto 0 auto;   
+    .img-box{
+        width: 96.39%;
+        height: 97.76%;  
+        overflow: hidden;       
+        position: relative;
+        .poster-imgs{
+            width: 100%;
+            height: 100%;
+            display: block;    
+            object-fit: cover;    
+        }
+        .poster-right{
+            position: absolute;
+            right: 16px;
+            top:15px;
+            width: 18%;
+        }
+        .poster-left{
+            position: absolute;
+            left:16px;
+            top:0;
+            width: 8%;
+        }
+    }
+    
+}
+.poster-box1{
+    background: #ffffff;
+    border: none;
+    width: 90.135%;
+    height:auto;
+    padding-bottom: 0.18rem;
+    overflow: hidden;
+    >div{
+        overflow: hidden;
+    }
+    .img-box{
+        margin-top: 0.1rem;
+        height: 4.08rem;        
+    }
+    
+}
+.downimg{
+    width: 80.135%;
+    display: block;
+    margin: 3% auto 0 auto;
+    position: relative;
+}
+.user-box{
+    margin-top: 0.2rem;
+    margin-bottom: 5px;
+    .two{
+        margin-left: 0.1rem;
+        margin-left: 3%;
+    }
+    .code-box{
+        width: 25%;     
+        margin-left: 3%;   
+        .code{
+            width: 100%;           
+        }
+    }
+   
+    p{
+        font-size: 0.12rem;
+    }
+    
+}
+.button-box{
+    width: 90.67%;
+    position: relative;
+    margin: 2% auto 0 auto;
+    .black{
+        width: 100%;
+        height: 0.5rem;
+        background-color: #050505;
+        font-family: "FZLTXIHJW--GB1-0";
+        font-size: 0.18rem;
+        color: #ffffff;
+        cursor: pointer;
+    }
+    .white{
+        width: 100%;
+        height: 0.5rem;
+        background-color: rgba(255,255,255,0);
+        font-family: "FZLTXIHJW--GB1-0";
+        font-size: 0.18rem;
+        color: #050505;
+    }
+    >div{
+        width: 100%;
+        margin-top: 2%;
+        button{
+            width: 1.62rem !important;
+        }
+        .red1{
+            background: rgb(178,31,44);
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            height: 0.4rem;
+            margin-top: 5%;
+            font-size: 0.18rem;
+        }
+        .red2{
+            background: rgb(178,31,44);
+            color: #000000;
+            height: 0.4rem;
+            margin-top: 5%;
+            font-size: 0.18rem;
+        }
+    }
+}
+.roule-box{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    .alert{
+        width: 3.23rem;
+        display: block;
+        margin: 0.1rem auto 0 auto;
+    }
+    .close{
+        width: 0.54rem;
+        display: block;
+        margin: 0.24rem auto 0 auto;
+    }
+   
+}
+.choose-box{
+    position: relative;
+    width: 3.06rem;   
+    overflow: auto;
+    margin: 5% auto 0 auto;
+    i{
+        display: inline-block;
+        width: 0.15rem;
+        height: 0.15rem;
+        background: rgba(255,255,255,0);
+        border: 1px solid #ffffff;
+        border-radius: 100%;
+        margin-right: 0.17rem;
+        &.active{
+            background: rgb(180,28,39);
+        }
+    }
+    li{
+        margin-top: 2%;       
+    }
+    p{
+        font-size: 0.14rem;
+        line-height: 0.2rem;
+        font-family: 'FZLTXIHJW--GB1-0'
+    }
+    .one{
+        color: rgb(149,142,142)
+    }
+    .two{
+        color:rgb(255,255,255);        
+    }
+}
+.hot{
+    width: 6%;
+    margin-right: 3%;
+}
+.center-box{
+    width: 100%;
+    height: 100%;
+}
+.down_box{
+    width: 0.395rem;
+    line-height: 0;
+    position: absolute;
+    bottom: 1.5%;
+    left: 44%;
+    z-index: 9;
+}
+.down_box img{
+    width: 100%;
+}
+.swing {			
+    animation-duration:2s;  
+    animation-delay: 0;  
+    animation-iteration-count: infinite;  
+}

@@ -1,0 +1,200 @@
+#shareimg {
+  width: 3.35rem;
+  height: 5.38rem;
+  margin: 0.1rem auto 0 auto;
+  position: relative;
+  display: none;
+}
+
+#shareimg img {
+  display: block;
+  font-size: 0;
+}
+
+#shareimg .top {
+  width: 1.35rem;
+  position: absolute;
+  right: 0;
+  z-index: 3;
+}
+
+#shareimg .text {
+  width: 0.365rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.24rem;
+}
+
+#shareimg .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+#shareimg .user-box {
+  width: 100%;
+  height: 4.1rem;
+  background: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+#shareimg .user-box .user-img {
+  width: 100%;
+  font-size: 0;
+}
+
+#shareimg .user {
+  width: 100%;
+  position: absolute;
+  bottom: 0.16rem;
+}
+
+#shareimg .user .name {
+  font-size: 0.16rem;
+  font-family: FZLTTHJW--GB1-0,FZLTTHJW--GB1;
+  font-weight: 800;
+  margin-bottom: 0.18rem;
+  margin-left: 0.16rem;
+  color: #ffffff;
+}
+
+#shareimg .user .line {
+  width: 0.4rem;
+  height: 0.02rem;
+  background: #ffffff;
+  margin: 0 0 0.1rem 0.16rem;
+}
+
+#shareimg .user .des {
+  width: 2.2rem;
+  font-size: 9px;
+  letter-spacing: 0.6px;
+  font-family: FZLTCHJW--GB1-0,FZLTCHJW--GB1;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 0.14rem;
+  margin-left: 0.16rem;
+  display: block;
+}
+
+#shareimg .user .codebox {
+  width: 0.51rem;
+  position: absolute;
+  right: 0.15rem;
+  bottom: 0;
+  text-align: center;
+}
+
+#shareimg .user .codebox img {
+  width: 0.51rem;
+  font-size: 0;
+}
+
+#shareimg .user .codebox p {
+  font-size: 8px;
+  color: #ffffff;
+  letter-spacing: 0.4px;
+  margin-top: 5px;
+}
+
+.box {
+  width: 3.35rem;
+  height: 4.1rem;
+  margin: 0.2rem auto 0.06rem;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.box img {
+  width: 3.35rem;
+  font-size: 0;
+}
+
+.box .text-box {
+  height: 0.8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.box .text-box img {
+  width: 0.56rem;
+}
+
+.box .text-box p {
+  font-size: 0.12rem;
+  font-family: PingFangSC-Regular,PingFangSC;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box .img-height, #shareimg .user-box .img-height {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.box .img-width, #shareimg .user-box .img-width {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input-box {
+  width: 3.35rem;
+  height: 0.4rem;
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  margin: 0.3rem auto 0 auto;
+}
+
+.input-box input {
+  width: 80%;
+  height: 100%;
+  font-size: 14px;
+  font-family: PingFangSC-Light,PingFangSC;
+  padding-left: 0.21rem;
+}
+
+.input-box input::-webkit-input-placeholder {
+  color: #231815;
+}
+
+.input-box input:-ms-input-placeholder {
+  color: #231815;
+}
+
+.input-box input::-ms-input-placeholder {
+  color: #231815;
+}
+
+.input-box input::placeholder {
+  color: #231815;
+}
+
+button {
+  display: block;
+  width: 3.35rem;
+  height: 0.5rem;
+  margin: 0.2rem auto 0 auto;
+  background: #231815;
+  font-size: 0.16rem;
+  font-family: PingFangSC-Medium,PingFangSC;
+  font-weight: 500;
+  color: white;
+}
+/*# sourceMappingURL=poster.css.map */

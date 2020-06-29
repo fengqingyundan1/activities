@@ -1,0 +1,246 @@
+body{
+    background-color: #FAE7B9;
+}
+.bg_img{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.box{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin-top: 80%;
+}
+.skill_box{
+    width: 100%;
+    margin: auto;
+    .bg_box{
+        width: 87.202%;
+        background: url('../img/bg_1.png');
+        box-sizing: 100% 100%;
+        margin: 0.09rem auto 0 auto;    
+        padding: 0.08rem 0;  
+        .shop_box{
+            width:93.274%;
+            background: #ffffff;
+            overflow: hidden;
+            .left{
+                width: 46.89%;
+            }
+            .title{
+                font-size:0.16rem;
+                font-family:FZLanTingHeiS-DB-GB;
+                color: #333333;
+                width: 1.23rem;
+                font-weight: 700;
+                line-height: 0.2rem;
+                overflow:hidden; 
+                text-overflow:ellipsis;
+                display:-webkit-box; 
+                -webkit-box-orient:vertical;
+                -webkit-line-clamp:2; 
+            }
+            .right1{
+                margin-right: 5%;
+            }
+            .right2{
+                margin-left: 0.2rem;
+            }
+            .line{
+                width:0.18rem;
+                height:2px;
+                background:rgba(179,37,48,1);
+                margin-top: 0.06rem;
+                margin-bottom: 0.11rem;
+               
+            }
+            .max_price{
+                font-size:0.08rem;
+                font-family:FZCuYuanSongS-R-GB;
+                font-weight:400;
+                text-decoration:line-through;
+                color:rgba(35,35,35,1);
+            }
+            .min_price{
+                font-size:0.1rem;
+                font-family:FZShangKuS-R-GB;
+                font-weight:600;
+                color:rgba(192,56,37,1);
+            }
+            .price{
+                font-size:0.23rem;
+                font-family:FZLanTingHeiS-DB-GB;
+                font-weight:700;
+                color: #C03825;            
+                margin-left: 0.06rem;
+            }
+            button{
+                width: 0.59rem;
+                height: 0.19rem;
+                background:rgba(178,66,47,1);
+                box-shadow:0px 2px 3px 0px rgba(178,66,47,0.23);
+                border-radius:0.06rem;
+                font-family: -apple-system-font, sans-serif;
+                font-weight:600;
+                color:rgba(252,232,212,1);
+                text-align: center;
+                font-size:0.1rem;
+                margin-top: 0.06rem;
+            }
+        }
+    }    
+}
+
+.plain_box{
+    width: 86.6%;
+    margin: -0.32rem auto 0 auto;
+    .bg_box{
+        width: 48.3%;
+        // height: 1.94rem;
+        background: url('../img/bg_2.png');
+        box-sizing: 100% 100%;
+        margin-top: 0.1rem;
+        padding: 0.06rem 0;
+        .shop_box{
+            width:91.235%;
+            // height:1.80rem;
+            background: #ffffff;
+            padding-bottom: 0 0 0.06rem 0;
+            .left_box{
+                width: 100%;
+                position: relative;
+            }
+            .logo{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 30%;
+            }
+            .left{
+                width: 100%;
+                display: block;
+            }
+            .title{
+                width:1.08rem;               
+                font-size:0.12rem;
+                font-family:FZLanTingHeiS-DB-GB;
+                font-weight:400;
+                color:rgba(28,28,28,1);
+                overflow:hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+                line-height: 0.16rem;
+                margin-top: 0.03rem;
+                margin-left: 0.06rem;
+                
+            }
+            .price_box{
+                margin-left: 0.06rem;
+            }
+            .max_price{
+                font-size:0.05rem;
+                font-family:FZCuYuanSongS-R-GB;
+                font-weight:400;
+                text-decoration:line-through;
+                color:rgba(35,35,35,1);
+            }
+            .min_price{
+                font-size:0.06rem;
+                font-family:FZShangKuS-R-GB;
+                font-weight:400;
+                color:rgba(192,56,37,1);
+            }
+            .price{
+                font-size:0.2rem;
+                font-family:FZLanTingHeiS-DB-GB;
+                font-weight:700;
+                color: #C03825;
+                margin-left: 0.01rem;
+                letter-spacing: -1px;
+            }
+            button{
+                width: 0.44rem;
+                // height: 0.12rem;
+                padding: 0.01rem 0;
+                background:rgba(178,66,47,1);
+                box-shadow:0px 2px 3px 0px rgba(178,66,47,0.23);
+                border-radius:0.06rem;
+                font-family: -apple-system-font, sans-serif;
+                font-weight:600;
+                color:rgba(252,232,212,1);
+                text-align: center;
+                font-size:0.07rem;
+                margin-right: 0.04rem;
+                // margin-left: 0.08rem;
+            }
+        }
+    }
+}
+.rule_box{
+    width: 99%;
+    margin: 0.1rem auto 0 auto;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .text{
+        position: absolute;
+        width: 100%;
+        top: 28%;
+        p{
+            width:2.55rem;
+            font-size:0.13rem;
+            font-family:FZLanTingHeiS-L-GB;
+            color:#fae9bb;
+            line-height:0.19rem;
+            margin: 0.06rem auto 0 auto;
+        }
+    }
+}
+.blod{
+    font-weight: 700;
+    // letter-spacing: 0.02rem;
+    margin-top: 0.02rem;
+    color: #000000 !important;
+    width: 2.8rem !important;
+}
+.title_box{
+    width: 94%;
+    display: block;
+    margin: 0.2rem auto 0 auto;
+}
+.bottom_box{
+    width: 94.5%;
+    margin: 0.42rem auto 0 auto;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .text{
+        position: absolute;
+        top: 21%;
+        left: 43%;
+        font-size:0.11rem;
+        font-family:FZLanTingHeiS-L-GB;
+        font-weight:bold;
+        color:rgba(255,255,255,1);
+        line-height:0.24rem;
+    }
+}
+.more_shop{
+    width: 99%;
+    height:0.52rem;
+    background:rgba(65,87,113,1);
+    border-radius:0.05rem;
+    font-size:18px;
+    font-family:FZLanTingHeiS-DB-GB;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    letter-spacing: 0.04rem;
+    z-index: 2;
+    margin: 0.1rem auto;
+    display: block;
+    // position: absolute;
+    // bottom: 0;
+}

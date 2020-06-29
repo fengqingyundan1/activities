@@ -1,0 +1,19 @@
+.box{
+    width: 3.35rem;
+    margin: 0.2rem auto;
+    
+    >div{
+        border-bottom: 1px solid #EDEEEE;
+        padding:0.1rem 0;       
+    }
+    .title{
+        font-size: 0.14rem;
+        color: #182024;
+      
+    }
+    .time{
+        font-size: 0.12rem;
+        margin-top: 0.06rem;
+        color: #A1A1A1;
+    }
+}

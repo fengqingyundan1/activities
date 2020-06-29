@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>测试你的直男度</title>   
+    <link rel="stylesheet" href="./lib/weui/css/weui.css">
+    <link rel="stylesheet" href="./lib/weui/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/fullpage.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css?v=7">    
+    <link rel="stylesheet" href="./css/animate.min.css"> 
+    <link rel="stylesheet" href="./css/typeit.min.css">
+    <script src="./lib/jquery-2.1.4.min.js"></script>
+    <script src="./lib/weui/js/jquery-weui.min.js"></script>      
+    <script src="./js/rem.js"></script> 
+    <script src="./js/home.js?v=6"></script> 
+    <script src="./js/fullpage.min.js"></script> 
+    <script src="./js/html2canvas.min.js"></script>
+    <script src="./js/template-web.js"></script>
+    <script src="./js/typeit.min.js"></script>
+</head>
+<body>    
+   <div id="fullpage">
+        <div class="section" id="section0">
+            <img src="./img/hello.png" alt="" class="img1">
+            <img src="./img/man.png" alt="" class="img2">
+            <span class="type-it"></span>   
+            <div class="button-box">
+                <button class="go">点击进入测试</button>
+                <p>听说直男度能当钱花</p>
+            </div>             
+        </div>
+        <div class="section" id="section1">
+           <img src="./img/title.png" alt="" class="title-img">
+           <div class="flex flex-direction-column">
+                <img src="./img/pg2_1.png" alt="" class="img1 flex-1">
+                <img src="./img/pg2_2.png" alt="" class="img2 flex-1">
+                <img src="./img/pg2_3.png" alt="" class="img3 flex-1" >
+           </div>
+          
+        </div>        
+   </div>
+</body>
+<script type="text/html" id="topicDom">
+    {{each topic val key}}   
+    <div class="section topic-div" id="section{{key+2}}">    
+        <img src="./img/title.png" alt="" class="title-img">    
+        <div class="topic-bg">
+            <img src="./img/pg{{key+1}}_bg.png" alt="">
+            <div class="topic-box">
+                <h2 class="num">NO.{{key+1}}</h2>
+                <p class="title">{{val.title}}</p>
+                {{each val.content con keys}}
+                    <div class="choose-box" data-key="{{key+1}}">
+                        <span class="topic-one">{{con.order}} ： {{con.choose}}</span>
+                        <span class="topic-desc" data-price="{{con.price}}">{{con.desc}}</span>
+                    </div>               
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</script>
+<script type="text/html" id="posterDom">
+    <div class="section" id="section7">
+        <div class="people-box">
+            <div class="price-box">
+                <div class="price">100</div>
+                <p class="desc">你是这样的24K直男</p>                       
+            </div>               
+        </div> 
+        <div class="box">
+            <div class="text-box">                
+                <p class="color-white">
+                潮流直男在秋冬最适合朋克冲锋衣了所谓时尚前锋，非你们莫属，偶尔来一件软壳，你们也是最靓的仔！<br/>这样的你们太适合<span class="color-blue">【潮流直男】</span>
+                的特权码了，赶快进入专题页下单时，特权码处输入<span class="color-blue">【潮流直男】</span>即可享受专题页<span class="color-blue">5.5折</span>价喔！
+                </p>
+            </div>
+            <div class="bottom flex flex-align-center flex-pack-justifyB">
+                <p>长按识别进入专题页></p>
+                <div class="code-box flex flex-align-center">
+                    <img src="./img/code.png" alt="">
+                </div>
+            </div>
+        </div>
+        <button class="poster-btn">点击生成海报分享给更多的人，寻找你的直男兄弟！</button>
+    </div>
+</script>
+<script type="text/html" id="posterShare">
+    <div class="section" id="shareimg">
+        <div class="share1">
+            <img src="./img/poster_bg1.jpg" alt="" class="poster-bg">
+            <div class="poster-box">                
+                <div class="price">100</div> 
+                <img src="./img/poster1.png" alt="" class="share-img">
+            </div>
+        </div>
+        <img src="" alt="" class="share2">      
+    </div>
+</script>        
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?3135668c18272140721ac41b4cc30a71";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script>
+shareWxMenu('没想到我是这样的程序员？！','告诉我，不是我一个人',window.location.href,'https://www.toread.com.cn/Public/activities/1024/img/share.jpg')  
+    $(function(){
+        var isGoSeven = false;
+        var isCanvans = true;
+        var timeOut;
+        var nextDom;
+        //获取答题数据        
+        var data = template("topicDom",programmer);  
+        $('#fullpage').append(data) 
+        var data1 = template("posterDom");  
+        $('#fullpage').append(data1) 
+        var data2 = template("posterShare");  
+        $('#fullpage').append(data2) 
+        var h1 = window.innerHeight;        
+        $('.section').height(h1+'px');
+        $('#fullpage').fullpage({
+            verticalCentered: false,
+            css3:true,
+            afterRender:function(index,nextIndex,direction){
+
+            },
+            onLeave:function(index,nextIndex,direction){
+                // if(direction === 'up') return false
+                // console.log(nextIndex.index)
+                if(nextIndex.index === 1){
+                    nextDom = setTimeout(function(){                      
+                        $.fn.fullpage.moveSectionDown()
+                    },5000);
+                }      
+                if(nextIndex.index === 2){                   
+                    clearTimeout(nextDom)
+                }       
+                if(nextIndex.index === 7){   
+                    if(!isGoSeven) return false                
+                    var num = 0
+                    $('.on').each(function(){                                              
+                        num += $(this).data('price')                        
+                    })  
+                    if(num<50){
+                        $('#section7').addClass('math3')
+                        $('.desc').html('潮流直男就是你了！')
+                        $('.share-img').attr("src","./img/poster3.png?v=1")
+                        $('.poster-bg').attr("src","./img/poster_bg3.jpg")
+                        $('.price').addClass('price3')
+                    }else if(num>= 50 && num <70){
+                        $('#section7').addClass('math2')
+                        $('.text-box').html('<p class="color-black">文艺直男在秋冬喜欢套系服饰，黑白灰的主'+
+                        '打色系绝对不会过时，配上一个商旅包包，'+
+                        '气场2米8，对于这样的你<span class="color-blues">【文艺直男】</span>特权'+
+                        '码最适合你了。<br/>进入专题多款服饰提升你的'+
+                        '气场，下单时，特权码处输入<span class="color-blues">【文艺直男】</span>'+
+                        '即可享受<span class="color-blues">5折</span>价哟！</p>')
+                        $('.desc').html('还好你是个文艺直男。')
+                        $('.share-img').attr("src","./img/poster2.png?v=1")
+                        $('.poster-bg').attr("src","./img/poster_bg2.jpg")
+                        $('.price').addClass('price2')
+                    }else{
+                        $('#section7').addClass('math1')
+                        $('.text-box').html('<p class="color-black">24K直男在秋冬最喜欢穿抓绒，一件买2个，'+
+                        '轮换着穿，他们工作认真，性格耿直，穿衣'+
+                        '单调，妹子嘛，很有可能没有，为了奖励你'+
+                        '们刚正不阿的直，送你<span class="color-white">【钢铁直男】</span>特权码。'+
+                        '<br/>现在进入程序员的世界，挑选你的心怡宝贝，'+
+                        '下单时，特权码处输入<span class="color-white">【钢铁直男】</span>即可享'+
+                        '受专题页<span class="color-white">4.5折</span>价喔~</p>')
+                        $('.desc').html('你是这样纯的24K直男！')                       
+                        $('.share-img').attr("src","./img/poster1.png?v=1")
+                        $('.poster-bg').attr("src","./img/poster_bg1.jpg")
+                        $('.price').addClass('price1')
+                    }        
+                    $('.price').html(num)     
+                }
+                if(nextIndex.index === 8){
+                    if(isCanvans){             
+                        $.showLoading('正在生成图片')   
+                        setTimeout(function(){
+                            drawCanvas('shareimg').then(function(canvas){ 
+                                isCanvans = false
+                                var url = canvas.toDataURL("image/png")        
+                                $('.share1').hide()                   
+                                $('.share2').attr('src',url).show() 
+                                $.hideLoading()
+                            })
+                        }, 1500)
+                    };     
+                    
+                }
+                
+            },
+            afterLoad:function(text,index){							
+                
+            },
+        })
+
+        // $.fn.fullpage.silentMoveTo(7)
+        //打字效果
+        $('.type-it').typeIt({
+            whatToType:['public class HelloWorld {',' public static void main(String[] args) {','System.out.println("Hello World"); }','}'],
+            typeSpeed: 85, //打印速度
+            lifeLike: true, //设置不规则的打字速度，模拟真人打字效果
+            showCursor: true, //显示闪烁的光标效果
+            breakLines:true, //多行文本时的打印效果
+            breakWait:30,  //打印多个句子时，句子之间的间隔时间
+        },function(){
+            $('.go').show(800)
+        }),   
+
+        $('.go').click(function(){
+            $.fn.fullpage.silentMoveTo(2)
+        })
+        // 答题
+        $('body').on('click','.choose-box',function(){
+            var index= $(this).data('key')          
+            $(this).parents('.topic-box').find('.topic-desc').hide().removeClass('on')
+            $(this).find('.topic-desc').show(400,function(){
+                if(index === 5){
+                    isGoSeven = true
+                }
+                clearTimeout(timeOut)
+                timeOut = setTimeout(function(){
+                    $.fn.fullpage.moveSectionDown()
+                },1000) 
+                          
+            }).addClass('on')
+        })
+        $('body').on('click','.poster-btn',function(){
+            $.fn.fullpage.moveSectionDown()
+        })
+
+})
+    
+</script>
+</html>

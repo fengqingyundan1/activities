@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>攀登者</title>   
+    <link rel="stylesheet" href="./lib/weui/css/weui.css">
+    <link rel="stylesheet" href="./lib/weui/css/jquery-weui.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/poster.css?v=4">      
+    <script src="./lib/jquery-2.1.4.min.js"></script>
+    <script src="./lib/weui/js/jquery-weui.min.js"></script>      
+    <script src="./js/rem.js"></script> 
+    <script src="./js/home.js?v=5"></script>    
+    <script src="./js/html2canvas.min.js"></script> 
+    <script src="./js/exif.js"></script>
+    <!-- <script src="https://www.foooooot.com/static/retail/js/vconsole.min.js"></script>
+	<script> 
+		var vConsole = new VConsole(); vConsole.setOption('maxLogNumber'); 
+	</script> -->
+</head>
+<body>    
+   
+
+   <div class="main">  
+        <div class="box box1 img-box-con">
+            <img src="./img/4.jpg" alt="" class="poster-user">
+            <div class="text-box">
+               <img src="./img/icon.png" alt="">  
+               <p>上传图片</p>  
+            </div>
+        </div>  
+        <div class="input-box">
+                <input type="text" placeholder="请输入姓名" class="user-input">
+        </div>
+        <button class="sure">生成证书</button>
+    </div>
+
+   <div id="shareimg">     
+        <div class="user-box img-box-con">
+            <img src="./img/top1.png" alt="" class="top">
+            <img src="" alt="" class="user-img poster-user">           
+        </div>
+        <img src="./img/bottom1.png" alt="" class="bottom">
+        <div class="user flex flex-align-center flex-pack-justifyB">
+            <div>
+                <p class="name">六二三, 感谢您</p>
+                <div class="line"></div>
+                <p class="des">您的捐赠已被“<span style="font-size:10px">西藏自治区高山救援基金会</span>”认领，将用于珠穆朗玛峰等高山地区的救援活动，感谢您对探路者和中国攀登事业的支持。</p>
+            </div>
+            <div class="codebox">
+                <img src="./img/code.png" alt="">
+                <p>扫码了解活动</p>
+            </div>
+        </div>
+    </div>
+    <input id="upfile" type="file" accept="image/*" name="upfile" style="display: none" >
+</body>      
+<script src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?1ce9e0ab3f050e186cd491508213942f";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+     
+<script>
+$(function(){
+    $('.sure').click(function(){       
+        var con = $('.user-input').val();     
+        if(!con) return      
+        $('.name').html(con+', 感谢您');                      
+        $.showLoading('正在生成图片');
+        $('.main').hide();
+        $('#shareimg').show();
+        setTimeout(function(){
+                drawCanvas('shareimg').then(function(canvas){
+                $.hideLoading('正在生成图片')   
+                var url = canvas.toDataURL("image/png",1)   
+                sessionStorage.setItem('img',url)              
+                window.location.href = './share.html'
+                // $('.tst1').attr('src',url)
+            })
+        },200)          
+    })
+    $('.user-input').on('blur',function(){       
+        $('html,body').animate({scrollTop: 0}, 0);
+    })
+    
+    $('.box1').click(function(){
+        $("#upfile").trigger("click");
+    })
+
+    $("#upfile").change(function(){          
+            file = this.files[0]; 
+            if(file){ 
+                $('.poster-user').removeClass('img-height img-width')       
+                var reader = new FileReader(); //本地预览
+                reader.readAsDataURL(file); //Base64
+                reader.onload = function(e){
+                    EXIF.getData(file,function(){                                
+                        roted = file.exifdata.Orientation;              
+                        var  reader = new FileReader();        
+                        reader.readAsDataURL(file);
+                        reader.onload = function(e){                                   
+                            getImgData(this.result,roted,function(data){
+                                var img = new Image();
+                                img.src = data
+                                img.onload = function(){
+                                    var width  = this.width
+                                    var height = this.height                                                                    
+                                    var initWidth = $('.img-box-con').width()
+                                    var initHeight = $('.img-box-con').height()                                  
+                                    if(width - initWidth > height-initHeight){                                        
+                                        $('.poster-user').addClass('img-height')
+                                    }else if(height-initHeight > width - initWidth){
+                                        $('.poster-user').addClass('img-width')
+                                    }                                 
+                                }
+                                $('.poster-user').attr('src',data)  
+                            })  
+                            
+                        }
+                    });
+                }
+            }
+    
+        });
+
+
+    
+})
+</script>
+</html>

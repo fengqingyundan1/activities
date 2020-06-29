@@ -1,0 +1,142 @@
+@charset "UTF-8";
+.banner {
+  width: 3.55rem;
+  font-size: 0;
+  border-radius: 0.05rem;
+  margin: 0.16rem auto 0 auto;
+  text-align: center;
+}
+
+.banner img {
+  max-width: 100%;
+}
+
+.info {
+  width: 3.55rem;
+  margin: 0.17rem auto 0 auto;
+}
+
+.info .title {
+  font-size: 0.22rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 0.13rem;
+}
+
+.info .order {
+  font-size: 0.14rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+
+.info .order::before {
+  content: '产品编号：';
+  color: #999999;
+}
+
+.info .price {
+  font-size: 0.14rem;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #666666;
+}
+
+.info .price::before {
+  content: '吊牌价：¥';
+  color: #666666;
+  font-size: 0.14rem;
+}
+
+.titles {
+  margin: 0.49rem 0 0 0.1rem;
+  font-size: 0.16rem;
+  font-family: FZLanTingHeiS-B-GB;
+  font-weight: 400;
+  color: #666666;
+}
+
+.sku {
+  margin: auto;
+  font-size: 0;
+}
+
+.sku li {
+  width: 0.81rem;
+  text-align: center;
+  margin-left: 0.1rem;
+  margin-top: 0.18rem;
+}
+
+.sku img {
+  max-width: 100%;
+}
+
+.sku p {
+  font-size: 0.14rem;
+  font-family: FZLanTingHeiS-R-GB;
+  font-weight: 400;
+  color: #333333;
+  text-align: center;
+  margin-top: 0.09rem;
+}
+
+.detail {
+  width: 100%;
+  font-size: 0;
+  text-align: center;
+  min-height: 200px;
+}
+
+.detail div {
+  max-width: 100%;
+  min-height: 200px;
+}
+
+.detail img {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.people {
+  width: 3.55rem;
+  margin: 0.22rem auto 0 auto;
+}
+
+.people .one {
+  width: 1.73rem;
+  height: 0.5rem;
+  background: whitesmoke;
+  border-radius: 0.03rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.people .one .info1 {
+  width: auto;
+  margin: 0.06rem auto 0 auto;
+}
+
+.people .one img {
+  width: 0.17rem;
+  height: 0.17rem;
+  margin-left: 0.18rem;
+}
+
+.people .one p {
+  font-size: 0.12rem;
+  font-family: FZLanTingHeiS-R-GB;
+  font-weight: 400;
+  color: #666666;
+}
+
+.people .one a {
+  font-size: 0.12rem;
+  font-family: FZLanTingHeiS-R-GB;
+  color: #1789f3;
+  position: relative;
+  top: -0.04rem;
+}
+/*# sourceMappingURL=detail.css.map */
